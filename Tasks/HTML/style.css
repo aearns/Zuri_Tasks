@@ -1,0 +1,32 @@
+nav{
+    display:flex;
+    justify-content: space-around;
+    width:20%;
+    margin-left: auto;
+}
+nav a{
+    color:black;
+    text-decoration: none;
+}
+nav img{
+    height:20px;
+}
+main{
+    width:50%;
+    margin:auto;
+    text-align:center;
+}
+input{
+    width:80%;
+    padding:0.8em;
+    margin:auto;
+    border-radius:20px;
+    border: 1px solid grey;
+}
+.buttons_here{
+    margin-top: 1em;
+}
+.buttons_here button{
+    padding:1em;
+    border:none;
+}
