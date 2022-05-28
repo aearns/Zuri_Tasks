@@ -5,7 +5,7 @@
 
 
 def find_anagram(word, anagram):
-    if (sorted(word) == sorted(anagram))
+    if (sorted(word) == sorted(anagram)):
         print(True) # [assignment] Add your code here
     else: 
         print(False)
