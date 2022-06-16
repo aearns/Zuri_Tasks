@@ -14,10 +14,6 @@ while is_running:
 
     user_input = input("Please select R, P or S: ")
 
-    # def user():
-    #     input("Please select R, S or P: ")
-    # user()
-
     def game():
         if user_input == "R":
             print("You have selected: ", user_input)
