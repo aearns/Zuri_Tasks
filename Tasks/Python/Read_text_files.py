@@ -13,4 +13,4 @@ def count_words():
     text = read_file_content("./story.txt")
     # [assignment] Add your code here
 
-    return {"as": 10, "would": 20}
+    return {"as": 10, "would": 20}''
