@@ -1,50 +1,55 @@
-# This is Python game
+# Rock Paper Scissors
+
 import random
-options = ['R', 'P', 'S']
+options = ["R", "P", "S"]
 
-var = ['R', 'P', 'S']
-def game(R, P, S):
-    Pick1= 'R'
-    Pick2= 'P'
-    Pick3= 'S'
-print (game)
+def welcome():
+    print('Welcome to Rock Paper Scissors')
+    print("R is for Rock\nP is for Scissors\nS is for Scissors" )
+welcome()
 
-print('Welcome to Rock Paper Scissors')
-print('This is a simple game.\nPlayer vs Computer. Choose Rock')
-user = str(input('Please select your option R, P or S: '))
-for i in range(var):
-    print("Let's play!")
-if user == game:
-    print("Your choice is, ", user)
-else:
-    print('Invalid options. Please select R, P, or S')
-# comp = random.choice(options)
+user_input = input("Please select R, P or S: ")
+# def user():
+#     input("Please select R, S or P: ")
+# user()
 
-while user == game:
-    print("Your choice is,",user)
-    comp = random.choice(options)
-    if comp == user:
-        print('Congratulations, you win')
+def game():
+    if user_input == "R":
+        print("You have selected: ", user_input)
+    elif user_input == "S":
+        print("You have selected: ", user_input)
+    elif user_input == "P":
+        print("You have selected: ", user_input)
     else:
-        print('Sorry, you lost. Please play again')
+        print("Sorry, please select R, P or S")
+game()
+
+computer = str(random.choice(options))
+answer = []
+answer.append(computer)
+
+# Rock wins Scissors
+# Paper wins Rock
+# Scissors wins Paper
+
+def new_game():
+    if computer == answer:
+        print("Draw")
+    elif game == "R" and answer != "P":
+        print("You win")
+    elif game == "P" and answer != "S":
+        print("You win")
+    elif game == "S" and answer != "R":
+        print("You win")
+    else:
+        print('Sorry you lost')
+    print(f"Computer choose {answer}")
+new_game()
+
+new_game1 = input("Let's play again? Y/N: ")
+if new_game1 == "Y":
+    welcome()
+    while new_game1 == "Y":
+        new_game()
 else:
-    print('Invalid options. Please select R, P, or S')
-
-# for i in game i:
-#     print('You have selected', i)
-#while user == game:
-#    print('You selected', user)
-#    print("Now, let's play Rock Paper Scissors")
-# else:
-#     print('Sorry, please select R, P or S')
-#     break;
-
-# if comp == user:
-#     print('Congratulations, you win')
-# else:
-#     print('Sorry, you lost')
-#     print('Computer selected:', comp)
-
-
-#again (input('Would you like to play again? Y/N' ))
-#if again == Y:
+    print("See you next time!")
