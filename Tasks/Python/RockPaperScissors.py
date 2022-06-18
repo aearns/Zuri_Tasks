@@ -1,6 +1,7 @@
 # Rock Paper Scissors Game
 
 import random
+from time import wait
 options = ["Rock", "Paper", "Scissors"]
 
 is_running = True
@@ -28,6 +29,9 @@ while is_running:
     computer = str(random.choice(options))
     answer = []
     answer.append(computer)
+    
+    print("Computer is making a choice")
+    wait(0.5)
 
     # Rock beats Scissors
     # Paper beats Rock
@@ -52,5 +56,4 @@ while is_running:
         pass
     if choice == "N":
         is_running = False
-
 print("See you again next time!")
