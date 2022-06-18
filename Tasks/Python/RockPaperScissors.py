@@ -1,7 +1,7 @@
 # Rock Paper Scissors Game
 
 import random
-from time import wait
+#from time import puase
 options = ["Rock", "Paper", "Scissors"]
 
 is_running = True
@@ -31,7 +31,7 @@ while is_running:
     answer.append(computer)
     
     print("Computer is making a choice")
-    wait(0.5)
+  #  wait(0.5)
 
     # Rock beats Scissors
     # Paper beats Rock
