@@ -13,4 +13,3 @@ def find_anagram(word, anagram):
     return True
 
 find_anagram(word, anagram)
-
