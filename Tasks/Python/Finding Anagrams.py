@@ -3,13 +3,14 @@
 # find_anagrams("hello", "check") --> False
 # find_anagrams("below", "elbow") --> True
 
-word=input("Please type your first word here: ")
-anagram= input("Please type your second word here: ")
-
+word=input("Please type your first word here:\n")
+anagram=input("Please type your second word here:\n")
 def find_anagram(word, anagram):
-    if (sorted(word) == sorted(anagram)):
-        print(True) # [assignment] Add your code here
+    if (sorted(word.lower()) == sorted(anagram.lower())):
+        print(True)
     else: 
         print(False)
     return True
-find_anagram
+
+find_anagram(word, anagram)
+
