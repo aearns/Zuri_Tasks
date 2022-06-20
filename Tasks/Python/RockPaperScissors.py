@@ -2,35 +2,60 @@
 
 import random
 #from time import puase
+
 options = ["Rock", "Paper", "Scissors"]
+user_options = ["R", "r", "s", "S", "P", "p"]
 
 is_running = True
 
-#while is_running:
-
+# while is_running:
 def welcome():
     print('Welcome to Rock Paper Scissors')
-    print("R is for Rock\nP is for Paper\nS is for Scissors" )
+    print("Rock beats Scissors\nPaper beats Rock\nScissors beats Paper")
+    print("R is for Rock\nP is for Paper\nS is for Scissors")
 welcome()
+computer = str(random.choice(options))
+answer = []
+answer.append(computer)
+# User makes a selection
+input_user = input("Please choose R, P, or S:\n")
 
-user_input = input("Please select R, P or S: ")
+# If conditions are met
+if (input_user in user_options):
+    print("Great choice")
+    if input_user == user_options[0] or input_user == user_options[1]:
+            print("You have selected", options[0])
+    elif input_user == user_options[2] or input_user == user_options[3]:
+        print("You have selected", options[2])
+    elif input_user == user_options[4] or input_user == user_options[5]:
+        print("You have selected", options[1])
+else:
+    print("Sorry, please select R, P or S")
 
 def game():
-    if user_input == "R":
-        print("You have selected: ", options[0])
-    elif user_input == "P":
-        print("You have selected: ", options[1])
-    elif user_input == "S":
-        print("You have selected: ", options[2])
-    else:
-        print("Sorry, please select R, P or S")
+    if (input_user == answer):
+        print ("Oops! It's a draw")
+    if (input_user == "Rock" and answer == "Scissors"):
+        print ("Congratulations! You won. Rock crashes Scissors")
+    elif (input_user == "Rock" and answer == "Paper"):
+        print ("Sorry, you lost. Paper wraps Rocks")
+
+    if (input_user == "Scissors" and answer == "Paper"):
+        print ("Congratulations! You won. Rock crashes Scissors")
+    elif (input_user == "Scissors" and answer == "Rock"):
+        print ("Sorry, you lost. Rock crushes Scissors")
+
+    if (input_user == "Paper" and answer == "Rock"):
+        print ("Congratulations! You won. Paper wraps Rock")
+    elif (input_user == "Paper" and answer == "Scissors"):
+        print ("Sorry, you lost. Scissors cuts Paper")
 game()
+#     print("It's a draw")
+# elif input_user == user_options[2] or input_user == user_options[3] == answer["Rock"]:
+#     print("Congratulations")
+# elif input_user == user_options[4] or input_user == user_options[5] == answer["Paper"]:
+#     print("You have selected", options[1])
 
-
-#     computer = str(random.choice(options))
-#     answer = []
-#     answer.append(computer)
-#     
 #     print("Computer is making a choice")
 #   #  wait(0.5)
 # 
