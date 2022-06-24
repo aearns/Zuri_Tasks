@@ -1,6 +1,6 @@
-function
-$username = "Enoch";
-$age = 45
+// variable declaration
+let username = "Enoch"
+let age = 20
 
-function print ($username)
-void
+username
+age
